@@ -32971,10 +32971,10 @@ return A.L($async$ms,r)},
 Y(a){var s=null
 return A.a8A(new A.tg(A.a58(A.ak8(A.aij(new A.Qe(this)),!0),B.vF,s,s,s,1/0),s),B.ac)},
 OR(){var s=null,r=A.y0(14),q=A.d([new A.eX(0,B.eQ,B.m.hP(0.3),B.Dh,15)],t.xq),p=t.nA
-return A.Tk(A.a8W(s,A.a58(A.aah(A.d([B.yN,B.Gq,A.a54(A.d([A.Yx("\u0645\u062a\u0648\u0641\u0631 \u0639\u0644\u0649",A.i9(s,s,B.i.hP(0.8),s,s,s,s,s,s,s,s,12,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s),B.Kr],p),B.b6,B.bN)],p),B.bN,B.oL),new A.eW(B.m,s,s,r,q,s,B.bD),s,s,B.ym,s),B.aV,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.Qd(this),s,s,s),B.GN,s,s,s)}}
+return A.Tk(A.a8W(s,A.a58(A.aah(A.d([B.yN,B.Gq,A.a54(A.d([A.Yx("\u0645\u062a\u0648\u0641\u0631 \u0639\u0644\u0649",A.i9(s,s,B.i.hP(0.8),s,s,s,s,s,s,s,s,12,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s),B.Ks],p),B.b6,B.bN)],p),B.bN,B.oL),new A.eW(B.m,s,s,r,q,s,B.bD),s,s,B.ym,s),B.aV,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.Qd(this),s,s,s),B.GN,s,s,s)}}
 A.Qe.prototype={
-$2(a,b){var s=null,r=t.nA,q=A.aah(A.d([A.ai4(B.yJ,B.i.hP(0.9),s,32),B.Gp,B.Ks],r),B.h9,B.ha),p=b.b>800?80:24,o=A.y0(30),n=A.d([new A.eX(0,B.eQ,B.m.hP(0.3),B.Dg,25)],t.xq),m=A.y0(30)
-return new A.nq(new A.kc(new A.ay(0,1/0,b.d,1/0),A.a54(A.d([new A.hU(B.yn,q,s),new A.hU(new A.bE(p,40,p,40),A.a54(A.d([A.a58(A.a87(m,new A.qK(A.ak4(s,s,new A.pa("assets/images/logo.jpeg",s,s)),B.vG,s)),new A.eW(s,s,s,o,n,s,B.bD),140,s,s,140),B.Gr,B.Kt,B.ut,A.Yx("\u062d\u0645\u0651\u0644 \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0627\u0644\u0622\u0646 \u0648\u0627\u0633\u062a\u0645\u062a\u0639 \u0628\u062a\u062c\u0631\u0628\u0629 \u0645\u0645\u064a\u0632\u0629",A.i9(s,s,B.i.hP(0.9),s,s,s,s,s,s,s,s,20,s,s,s,s,1.6,!0,s,s,s,s,s,s,s,s),B.d4),B.Gs,this.a.OR(),B.ut,A.Yx("\u0642\u0631\u064a\u0628\u0627\u064b \u0639\u0644\u0649 App Store",A.i9(s,s,B.i.hP(0.7),s,s,s,s,s,s,s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s)],r),B.b7,B.h9),s),new A.hU(B.yl,A.Yx("\xa9 2025 Dallihum. \u062c\u0645\u064a\u0639 \u0627\u0644\u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638\u0629",A.i9(s,s,B.i.hP(0.6),s,s,s,s,s,s,s,s,13,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s),s)],r),B.b7,B.oK),s),s)},
+$2(a,b){var s=null,r=t.nA,q=A.aah(A.d([A.ai4(B.yJ,B.i.hP(0.9),s,32),B.Gp,B.Kt],r),B.h9,B.ha),p=b.b>800?80:24,o=A.y0(30),n=A.d([new A.eX(0,B.eQ,B.m.hP(0.3),B.Dg,25)],t.xq),m=A.y0(30)
+return new A.nq(new A.kc(new A.ay(0,1/0,b.d,1/0),A.a54(A.d([new A.hU(B.yn,q,s),new A.hU(new A.bE(p,40,p,40),A.a54(A.d([A.a58(A.a87(m,new A.qK(A.ak4(s,s,new A.pa("assets/images/logo.jpeg",s,s)),B.vG,s)),new A.eW(s,s,s,o,n,s,B.bD),140,s,s,140),B.Gr,B.Kr,B.ut,A.Yx("\u062d\u0645\u0651\u0644 \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0627\u0644\u0622\u0646 \u0648\u0627\u0633\u062a\u0645\u062a\u0639 \u0628\u062a\u062c\u0631\u0628\u0629 \u0645\u0645\u064a\u0632\u0629",A.i9(s,s,B.i.hP(0.9),s,s,s,s,s,s,s,s,20,s,s,s,s,1.6,!0,s,s,s,s,s,s,s,s),B.d4),B.Gs,this.a.OR(),B.ut,A.Yx("\u0642\u0631\u064a\u0628\u0627\u064b \u0639\u0644\u0649 App Store",A.i9(s,s,B.i.hP(0.7),s,s,s,s,s,s,s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s)],r),B.b7,B.h9),s),new A.hU(B.yl,A.Yx("\xa9 2025 Dallihum. \u062c\u0645\u064a\u0639 \u0627\u0644\u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638\u0629",A.i9(s,s,B.i.hP(0.6),s,s,s,s,s,s,s,s,13,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s),s)],r),B.b7,B.oK),s),s)},
 $S:194}
 A.Qd.prototype={
 $0(){return this.a.ms("https://play.google.com/store/apps/details?id=com.rubae3e.dallihum")},
@@ -62293,12 +62293,12 @@ B.Jr=new A.l(!0,B.A,null,".AppleSystemUIFont",null,null,null,null,null,null,null
 B.JH=new A.l(!0,B.m,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.e,null,null,null,"blackRedwoodCity labelMedium",null,null,null,null)
 B.Hj=new A.l(!0,B.m,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.e,null,null,null,"blackRedwoodCity labelSmall",null,null,null,null)
 B.Kq=new A.d4(B.IF,B.HS,B.IG,B.J6,B.Hz,B.HG,B.I8,B.IZ,B.Ij,B.Jv,B.Ha,B.Hq,B.Jr,B.JH,B.Hj)
-B.IV=new A.l(!0,B.i,null,null,null,null,22,B.cu,null,0.5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.Kr=new A.ls("Google Play",null,B.IV,null,null)
-B.HT=new A.l(!0,B.i,null,null,null,null,28,B.cu,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.Ks=new A.ls("Dallihum",null,B.HT,null,null)
 B.JG=new A.l(!0,B.i,null,null,null,null,52,B.cu,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.Kt=new A.ls("\u062f\u0644\u0651\u0647\u0645",null,B.JG,null,null)
+B.Kr=new A.ls("\u062f\u0644\u0651\u064a\u0647\u0645",null,B.JG,null,null)
+B.IV=new A.l(!0,B.i,null,null,null,null,22,B.cu,null,0.5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.Ks=new A.ls("Google Play",null,B.IV,null,null)
+B.HT=new A.l(!0,B.i,null,null,null,null,28,B.cu,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.Kt=new A.ls("Dallihum",null,B.HT,null,null)
 B.MG=new A.Z5(0,"system")
 B.Dm=new A.w(0.056,0.024)
 B.Du=new A.w(0.108,0.3085)
