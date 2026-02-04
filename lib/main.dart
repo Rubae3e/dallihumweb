@@ -72,6 +72,7 @@ class LandingPage extends StatelessWidget {
                           children: [
                             _buildHeader(),
                             _buildHeroSection(context, isWide),
+                            _buildStepsSection(isWide),
                             _buildFooter(),
                           ],
                         ),
@@ -270,6 +271,99 @@ class LandingPage extends StatelessWidget {
     );
   }
 
+  Widget _buildStepsSection(bool isWide) {
+    final steps = [
+      {'number': '1', 'text': 'شارك رقمك'},
+      {'number': '2', 'text': 'ابو التوصيل يبحث عن رقمك'},
+      {'number': '3', 'text': 'راح ينرسم مسار لحد باب بيتك'},
+      {'number': '4', 'text': 'تطلع تلكة ابو التوصيل بالباب'},
+    ];
+
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: isWide ? 120 : 32,
+        vertical: 40,
+      ),
+      child: Column(
+        children: [
+          const Text(
+            'كيف يشتغل؟',
+            style: TextStyle(
+              fontSize: 32,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(height: 40),
+          for (int i = 0; i < steps.length; i++) ...[
+            _buildStepCard(steps[i]['number']!, steps[i]['text']!),
+            if (i < steps.length - 1) _buildSpiralArrow(),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Widget _buildStepCard(String number, String text) {
+    return Container(
+      width: double.infinity,
+      constraints: const BoxConstraints(maxWidth: 500),
+      padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 22),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(
+          color: Colors.white.withValues(alpha: 0.25),
+          width: 1.5,
+        ),
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 44,
+            height: 44,
+            decoration: BoxDecoration(
+              color: const Color(0xFF4FC3F7),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Center(
+              child: Text(
+                number,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(width: 18),
+          Expanded(
+            child: Text(
+              text,
+              style: const TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+                height: 1.4,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSpiralArrow() {
+    return SizedBox(
+      width: 60,
+      height: 80,
+      child: CustomPaint(
+        painter: SpiralArrowPainter(),
+      ),
+    );
+  }
+
   Widget _buildFooter() {
     return Padding(
       padding: const EdgeInsets.all(24),
@@ -282,4 +376,61 @@ class LandingPage extends StatelessWidget {
       ),
     );
   }
+}
+
+class SpiralArrowPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = const Color(0xFF4FC3F7)
+      ..strokeWidth = 2.5
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round;
+
+    final centerX = size.width / 2;
+
+    // Draw spiral curve from top to bottom
+    final path = Path();
+    path.moveTo(centerX, 4);
+
+    // First spiral loop - curve to the right
+    path.cubicTo(
+      centerX + 22, size.height * 0.12,
+      centerX + 26, size.height * 0.25,
+      centerX + 8, size.height * 0.35,
+    );
+
+    // Second spiral loop - curve to the left
+    path.cubicTo(
+      centerX - 14, size.height * 0.45,
+      centerX - 22, size.height * 0.55,
+      centerX - 6, size.height * 0.65,
+    );
+
+    // Final curve back to center and down
+    path.cubicTo(
+      centerX + 10, size.height * 0.74,
+      centerX + 6, size.height * 0.82,
+      centerX, size.height - 16,
+    );
+
+    canvas.drawPath(path, paint);
+
+    // Draw arrowhead
+    final arrowPaint = Paint()
+      ..color = const Color(0xFF4FC3F7)
+      ..strokeWidth = 2.5
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round;
+
+    final arrowPath = Path();
+    arrowPath.moveTo(centerX - 8, size.height - 24);
+    arrowPath.lineTo(centerX, size.height - 12);
+    arrowPath.lineTo(centerX + 8, size.height - 24);
+
+    canvas.drawPath(arrowPath, arrowPaint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
