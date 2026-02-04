@@ -73,6 +73,7 @@ class LandingPage extends StatelessWidget {
                             _buildHeader(),
                             _buildHeroSection(context, isWide),
                             _buildStepsSection(isWide),
+                            _buildFeaturesSection(isWide),
                             _buildFooter(),
                           ],
                         ),
@@ -147,6 +148,16 @@ class LandingPage extends StatelessWidget {
               fontSize: 52,
               fontWeight: FontWeight.bold,
               color: Colors.white,
+            ),
+          ),
+          const SizedBox(height: 14),
+          Text(
+            'خصوصيتك أولاً .. لا يتم تحديث موقعك تلقائياً\nقم بتحديثه يدوياً',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.white.withValues(alpha: 0.7),
+              height: 1.6,
             ),
           ),
           const SizedBox(height: 16),
@@ -314,6 +325,99 @@ class LandingPage extends StatelessWidget {
       height: 80,
       child: CustomPaint(
         painter: SpiralArrowPainter(),
+      ),
+    );
+  }
+
+  Widget _buildFeaturesSection(bool isWide) {
+    final features = [
+      {'icon': Icons.my_location, 'title': 'تحديد موقع دقيق'},
+      {'icon': Icons.chat_bubble_outline, 'title': 'تواصل مباشر'},
+      {'icon': Icons.verified_user_outlined, 'title': 'آمن وسهل الاستخدام'},
+      {'icon': Icons.phone_in_talk, 'title': 'اتصال داخل التطبيق'},
+    ];
+
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: isWide ? 120 : 24,
+        vertical: 50,
+      ),
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+            decoration: BoxDecoration(
+              color: const Color(0xFF4FC3F7).withValues(alpha: 0.15),
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: const Text(
+              'ماذا يوفر لك التطبيق؟',
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          const SizedBox(height: 40),
+          Wrap(
+            spacing: 20,
+            runSpacing: 20,
+            alignment: WrapAlignment.center,
+            children: features
+                .map((f) => _buildFeatureCard(
+                      f['icon'] as IconData,
+                      f['title'] as String,
+                      isWide,
+                    ))
+                .toList(),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFeatureCard(IconData icon, String title, bool isWide) {
+    final cardWidth = isWide ? 240.0 : 160.0;
+    return Container(
+      width: cardWidth,
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 28),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: Colors.white.withValues(alpha: 0.15),
+          width: 1.2,
+        ),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: 60,
+            height: 60,
+            decoration: BoxDecoration(
+              color: const Color(0xFF4FC3F7).withValues(alpha: 0.2),
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Icon(
+              icon,
+              color: const Color(0xFF4FC3F7),
+              size: 30,
+            ),
+          ),
+          const SizedBox(height: 18),
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 17,
+              fontWeight: FontWeight.w600,
+              color: Colors.white,
+              height: 1.5,
+            ),
+          ),
+        ],
       ),
     );
   }
