@@ -82,52 +82,6 @@ class LandingPage extends StatelessWidget {
                 ),
               ),
             ),
-            // النص على الجانب الأيمن
-            Positioned(
-              right: 30,
-              top: 0,
-              bottom: 0,
-              child: Center(
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.15),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Text(
-                    'رقمك الحقيقي يبقى الك',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            // النص على الجانب الأيسر
-            Positioned(
-              left: 30,
-              top: 0,
-              bottom: 0,
-              child: Center(
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.15),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Text(
-                    'موقعك ما يشتغل الا بايدك',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       ),
