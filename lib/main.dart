@@ -174,7 +174,7 @@ class LandingPage extends StatelessWidget {
           _buildGooglePlayButton(),
           const SizedBox(height: 16),
           Text(
-            'قريباً على App Store',
+            'https://apps.apple.com/app/dallihum-%D8%AF%D9%84%D9%8A%D9%87%D9%85/id6758090967',
             style: TextStyle(
               fontSize: 14,
               color: Colors.white.withValues(alpha: 0.7),
