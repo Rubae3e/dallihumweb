@@ -31,6 +31,9 @@ class LandingPage extends StatelessWidget {
   static const String googlePlayUrl =
       'https://play.google.com/store/apps/details?id=com.rubae3e.dallihum';
 
+  static const String appStoreUrl =
+      'https://apps.apple.com/app/dallihum-%D8%AF%D9%84%D9%8A%D9%87%D9%85/id6758090967';
+
   Future<void> _launchUrl(String url) async {
     final uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
@@ -173,13 +176,7 @@ class LandingPage extends StatelessWidget {
           const SizedBox(height: 50),
           _buildGooglePlayButton(),
           const SizedBox(height: 16),
-          Text(
-            'https://apps.apple.com/app/dallihum-%D8%AF%D9%84%D9%8A%D9%87%D9%85/id6758090967',
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.white.withValues(alpha: 0.7),
-            ),
-          ),
+          _buildAppStoreButton(),
         ],
       ),
     );
@@ -220,6 +217,57 @@ class LandingPage extends StatelessWidget {
                   ),
                   const Text(
                     'Google Play',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0.5,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildAppStoreButton() {
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () => _launchUrl(appStoreUrl),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(14),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.3),
+                blurRadius: 15,
+                offset: const Offset(0, 6),
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.apple, color: Colors.white, size: 36),
+              const SizedBox(width: 14),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'متوفر على',
+                    style: TextStyle(
+                      color: Colors.white.withValues(alpha: 0.8),
+                      fontSize: 12,
+                    ),
+                  ),
+                  const Text(
+                    'App Store',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 22,
